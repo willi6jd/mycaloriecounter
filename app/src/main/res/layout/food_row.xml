@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/food_listview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -18,15 +19,16 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/listFoodFat"
+        android:id="@+id/listFoodSugar"
         android:layout_width="83dp"
         android:layout_height="38dp"
         android:text="TextView"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/listFoodPro"
         android:layout_width="83dp"
         android:layout_height="38dp"
         android:text="TextView"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 </LinearLayout>

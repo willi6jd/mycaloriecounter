@@ -11,7 +11,7 @@ import java.io.IOException
 /**
  * This will read data from the storage file and write data to it. will deliver the data to the service
  */
-interface FileDAO {}
+interface FileDAO {
     /**
      * These may be parameters
      * context: Context, fileName: String

@@ -15,14 +15,14 @@ class RecipeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe)
 
-        val btnCreate = findViewById(R.id.btnCreateRecipeItem) as Button //Create recipe button
+        val btnCreateRecipe = findViewById(R.id.btnCreateRecipeItem) as Button //Create recipe button
 
-        btnCreate.setOnClickListener {
+        btnCreateRecipe.setOnClickListener {
 
             // Get input fields (by ID) store them to recipe item variables
-            var itemName = findViewById<EditText>(R.id.recipeName); //Name of recipe: input text field
-            var itemCount = findViewById<EditText>(R.id.recipeItemCount); //Number of food items in recipe: integer
-            var itemDescription = findViewById<EditText>(R.id.recipeDescription); //Description of recipe: input text field, string
+            var recipeName = findViewById<EditText>(R.id.recipeName); //Name of recipe: input text field
+            var recipeCount = findViewById<EditText>(R.id.recipeItemCount); //Number of food items in recipe: integer
+            var recipeDescription = findViewById<EditText>(R.id.recipeDescription); //Description of recipe: input text field, string
 
             // Put recipe item variables into recipeItem Object
             fun recipeItem(nm: String, cnt: Int, dsc: String) {
