@@ -26,10 +26,11 @@ class FoodActivity : AppCompatActivity() {
         btnCreate.setOnClickListener {
 
             // Get input fields. Store them to food item variables
-            var itemName = findViewById<EditText>(R.id.foodName); //Name of food item: input text field
-            var itemCalories = findViewById<EditText>(R.id.foodCalories); //Calorie amount of food item: integer
-            var itemSugar = findViewById<EditText>(R.id.foodSugar); //Sugar amount of food item: integer
-            var itemProtein = findViewById<EditText>(R.id.foodProtein); //Protein amount of food: integer
+            var itemName = findViewById<EditText>(R.id.foodName).toString(); //Name of food item: input text field
+            var itemCalories = findViewById<EditText>(R.id.foodCalories).toInt(); //Calorie amount of food item: integer
+            var itemSugar = findViewById<EditText>(R.id.foodSugar).toInt(); //Sugar amount of food item: integer
+            var itemProtein = findViewById<EditText>(R.id.foodProtein).toInt(); //Protein amount of food: integer
+
 
             // Put food item variables into foodItem Object
             fun foodItem(nm: String, cal: Int, sgr: Int, pro: Int) {
@@ -43,7 +44,7 @@ class FoodActivity : AppCompatActivity() {
             val foodItemArray = Array(20) { }
 
             // Push foodItem to FoodItem Array
-            foodItemArray.add(foodItem(nm, cal, sgr, pro))
+            foodItemArray.add(foodItem(itemName, itemCalories, itemSugar, itemProtein))
         }
     }
 
@@ -107,5 +108,6 @@ private class foodCustomerAdapter(context: Context): BaseAdapter(){
         var sugar = 0;
         var protein = 0;
     }
+}
 
 
