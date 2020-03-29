@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/recipeName"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="Enter Recipe Name Here..." />
+
+    <TextView
+        android:id="@+id/recipeItemCount"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="Enter Food Item Count Here..."
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/recipeDescription"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:text="Enter Recipe Description Here..."
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnCreateRecipeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="bottom"
+        android:backgroundTint="#D81B60"
+        android:text="Add Recipe " />
+
+    <TextView
+        android:id="@+id/lblRecipeName"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/lblItemCount"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text=""
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblItemDescription"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:text=""
+        android:textStyle="bold" />
+
+
+</LinearLayout>

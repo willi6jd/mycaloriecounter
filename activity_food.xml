@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/foodName"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="Enter Food Name Here..." />
+
+    <TextView
+        android:id="@+id/foodCalories"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="Enter Calorie Count Here..."
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/foodSugar"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:text="Enter Sugar Amount Here..."
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/foodProtein"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="Enter Protein Amount Here..."
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnCreateFoodItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_gravity="bottom"
+        android:backgroundTint="#CFD1BC"
+        android:text="Add Food" />
+
+    <TextView
+        android:id="@+id/lblFoodName"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/lblFoodCalories"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text=""
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblFoodSugar"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:text=""
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblFoodProtein"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text=""
+        android:textStyle="bold" />
+
+</LinearLayout>
