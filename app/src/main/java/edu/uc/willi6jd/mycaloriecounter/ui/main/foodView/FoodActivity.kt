@@ -15,13 +15,13 @@ import edu.uc.willi6jd.mycaloriecounter.R
  * This will control the view when they get to the food page
  */
 class FoodActivity : AppCompatActivity() {
-    var foodList = ArrayList<Food>()
+    //var foodList = ArrayList<Food>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
         val listView = findViewById<ListView>(R.id.food_listview)
         listView.adapter =
-            foodCustomerAdapter(
+            FoodCustomerAdapter(
                 this
             )
 //
@@ -54,19 +54,16 @@ class FoodActivity : AppCompatActivity() {
 /**
  * This custom adapter is used to fill the data in the list view
  */
-private class foodCustomerAdapter(context: Context): BaseAdapter(){
-        private val mContext: Context
+private class FoodCustomerAdapter(context: Context): BaseAdapter(){
+        private val mContext: Context = context
 
-        //Test values for filling JSON
-        private val food = arrayListOf<String>("Peanut Butter", "Jelly", "Bread","Ham","Turkey")
-        private val cal = arrayListOf<String>("80", "90", "200","350","999")
-        private val fat = arrayListOf<String>("10", "2", "3","7","1")
-        private val pro = arrayListOf<String>("15", "0", "0","12","19")
+    //Test values for filling JSON
+        private val food = arrayListOf("Peanut Butter", "Jelly", "Bread","Ham","Turkey")
+        private val cal = arrayListOf("80", "90", "200","350","999")
+        private val fat = arrayListOf("10", "2", "3","7","1")
+        private val pro = arrayListOf("15", "0", "0","12","19")
 
-        init{
-            mContext = context
-        }
-        //Rows in list
+    //Rows in list
         override fun getCount(): Int {
             return food.size
         }
@@ -90,19 +87,19 @@ private class foodCustomerAdapter(context: Context): BaseAdapter(){
             val rowMain = layoutInflater.inflate(R.layout.food_row, viewGroup, false)
 
             val nameTextView = rowMain.findViewById<TextView>(R.id.listFoodName)
-            var currentItem = "Name: " + food.get(position)
+            var currentItem = "Name: " + food[position]
             nameTextView.text = currentItem
 
             val calTextView = rowMain.findViewById<TextView>(R.id.listFoodCal)
-            var currentCal = "Calories: " + cal.get(position)
+            var currentCal = "Calories: " + cal[position]
             calTextView.text = currentCal
 
             val fatTextView = rowMain.findViewById<TextView>(R.id.listFoodFat)
-            var currentFat = "Fat: " + fat.get(position)
+            var currentFat = "Fat: " + fat[position]
             fatTextView.text = currentFat
 
             val proTextView = rowMain.findViewById<TextView>(R.id.listFoodPro)
-            var currentPro = "Pro: " + pro.get(position)
+            var currentPro = "Pro: " + pro[position]
             proTextView.text = currentPro
 
             return rowMain
@@ -110,10 +107,10 @@ private class foodCustomerAdapter(context: Context): BaseAdapter(){
 
     }
     object FoodItem {
-        var name = "";
-        var calories = 0;
-        var sugar = 0;
-        var protein = 0;
+        var name = ""
+        var calories = 0
+        var sugar = 0
+        var protein = 0
     }
 }
 

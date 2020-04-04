@@ -16,18 +16,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.main_activity)
 
         val foodButton = findViewById<Button>(R.id.foodButton);
-        foodButton.setOnClickListener(){
+        foodButton.setOnClickListener {
             val foodIntent = Intent(this, FoodActivity:: class.java )
             startActivity(foodIntent)
         }
 
         val recipeButton = findViewById<Button>(R.id.recipeButton)
-        recipeButton.setOnClickListener(){
+        recipeButton.setOnClickListener {
             val recipeIntent = Intent(this, RecipeActivity:: class.java )
             startActivity(recipeIntent)
         }
         val dailyButton = findViewById<Button>(R.id.dailyButton)
-        dailyButton.setOnClickListener(){
+        dailyButton.setOnClickListener {
             val goalsIntent = Intent(this, GoalsActivity:: class.java )
             startActivity(goalsIntent)
         }
@@ -38,6 +38,6 @@ class MainActivity : AppCompatActivity() {
                 )
                 .commitNow()
         }
-        }
     }
+}
 

@@ -19,7 +19,7 @@ class RecipeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_recipe)
         val listView = findViewById<ListView>(R.id.recipe_listview)
         listView.adapter =
-            recipeCustomerAdapter(
+            RecipeCustomerAdapter(
                 this
             )
 //        val btnCreate = findViewById(R.id.btnCreateRecipeItem) as Button //Create recipe button
@@ -49,17 +49,14 @@ class RecipeActivity : AppCompatActivity() {
     /**
      * This is created in order to fill the listview with the recipes. This may change once we integrate file reading and writing.
      */
-    private class recipeCustomerAdapter(context: Context): BaseAdapter(){
-        private val mContext: Context
+    private class RecipeCustomerAdapter(context: Context): BaseAdapter(){
+        private val mContext: Context = context
 
         //Test values for filling JSON
-        private val recipe = arrayListOf<String>("Spaghetti", "Ham Sandhich","Fried Chicken, French Fries, Toast and Sauce")
-        private val count = arrayListOf<String>("5", "3", "4","350","999")
-        private val description = arrayListOf<String>("Noodles and meatsauce with cheese and garlic bread", "Bread, ham and cheese","Fried Chicken with french fries, buttered toast and sauce")
+        private val recipe = arrayListOf("Spaghetti", "Ham Sandhich","Fried Chicken, French Fries, Toast and Sauce")
+        private val count = arrayListOf("5", "3", "4","350","999")
+        private val description = arrayListOf("Noodles and meatsauce with cheese and garlic bread", "Bread, ham and cheese","Fried Chicken with french fries, buttered toast and sauce")
 
-        init{
-            mContext = context
-        }
         //Rows in list
         override fun getCount(): Int {
             return recipe.size
@@ -84,17 +81,16 @@ class RecipeActivity : AppCompatActivity() {
             val rowMain = layoutInflater.inflate(R.layout.recipe_row, viewGroup, false)
 
             val nameTextView = rowMain.findViewById<TextView>(R.id.listRecipeName)
-            var currentItem = "Name: " + recipe.get(position)
+            var currentItem = "Name: " + recipe[position]
             nameTextView.text = currentItem
 
             val calTextView = rowMain.findViewById<TextView>(R.id.listRecipeCount)
-            var currentCount = "Count: " + count.get(position)
+            var currentCount = "Count: " + count[position]
             calTextView.text = currentCount
 
             val fatTextView = rowMain.findViewById<TextView>(R.id.listRecipeDescription)
-            var currentDescription = "Description: " + description.get(position)
+            var currentDescription = "Description: " + description[position]
             fatTextView.text = currentDescription
-
 
             return rowMain
         }
@@ -102,9 +98,9 @@ class RecipeActivity : AppCompatActivity() {
     }
 
     object RecipeItem {
-        var name = "";
-        var count = 0;
-        var Description = "";
+        var name = ""
+        var count = 0
+        var Description = ""
     }
 
 }
