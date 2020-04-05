@@ -8,7 +8,7 @@ import edu.uc.willi6jd.mycaloriecounter.Service.FileService
  */
 class MainViewModel : ViewModel() {
     //private var foodList: ArrayList<Food> = Array
-    private var fileService: FileService = FileService()
+//    private var _fileService: FileService = FileService()
 
 //    val food: MutableLiveData<List<Food>> by lazy {
 //        MutableLiveData<List<Food>>().also {
